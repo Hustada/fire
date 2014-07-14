@@ -14,6 +14,7 @@ gem 'devise'
 gem 'high_voltage'
 gem 'pundit'
 gem 'simple_form'
+gem 'bootstrap-sass'
 group :development do
   gem 'rails_layout'
 end
