@@ -12,13 +12,19 @@ $grayMediumLight: #eaeaea;
 }
 
 /* universal */
-
 html {
   overflow-y: scroll;
 }
 
-body {
-  padding-top: 60px;
+.container {
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
 }
 
 section {
@@ -39,6 +45,8 @@ textarea {
 
 /* typography */
 
+
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
@@ -51,12 +59,25 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
-  font-weight: normal;
-  color: #999;
+  font-weight: 500;
+  font-size: 93px;
+  color: white;
+  font-family: Helvetica;
+}
+
+
+
+.hero-unit {
+padding: 60px;
+margin-bottom: 30px;
+font-size: 18px;
+font-weight: 200;
+line-height: 30px;
+color: inherit;
+background-color: #eeeeee;
 }
 
 p {
@@ -64,19 +85,231 @@ p {
   line-height: 1.7em;
 }
 
+
+/* Header */
+
+
+
+.btn-lg {
+  color: white;
+  background-color: transparent;
+  margin-top: 20px;
+
+}
+
+.col-lg-6 {
+width: 50%;
+margin-top: 60px;
+color: white;
+}
+
+#home-header {
+background-image: url(firepit_80opac.png);
+background-repeat: no-repeat;
+background-size: cover;
+width: 100%;
+height: 841px;
+display: block;
+}
+
+.header-description h2 {
+  font-weight: 100;
+  font-family: inherit;
+  font-size: 93px;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0px 12px rgba(36, 36, 36, 0.55);
+  padding: 0px 0 4px 0;
+}
+
 #logo {
   float: left;
-  margin-right: 10px;
+  margin-top: 20px;
   font-size: 1.7em;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
   font-weight: bold;
   line-height: 1;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
 }
 
-#logo:hover {
-  color: #fff;
+  
+
+
+.navbar-inner ul li {
+ display: inline-block;
+ padding: 10px 15px 10px;
+}
+
+.header-btn {
+color: white;
+margin: 0px auto;
+text-transform: uppercase;
+width: 20%;
+font-weight: 300;
+font-size: 24px;
+padding: 20px 35px;
+border: 2px solid rgb(219, 82, 47);
+background: rgb(219, 82, 47);
+display: block;
+-webkit-border-radius: 9px;
+border-radius: 9px;
+text-align: center;
+}
+
+
+
+.header-btn:hover {
+  background-color: transparent;
+  color: white;
   text-decoration: none;
 }
+
+
+
+.header-description {
+  margin: 100px 0 80px;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/* site header */
+
+
+.nav li a {
+  color: #db522f;
+}
+
+/* home-footer */
+
+
+.row.home-footer {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  height: 200px;
+  background: rgb(243, 243, 243);
+  position: relative;
+}
+
+
+.col-md-4 {
+  width: 33.3%;
+  margin-right: -15px;
+  margin-left: 15px;
+}
+
+.col-md-4 {
+  color: rgb(124, 124, 124);
+}
+
+/* carousel */
+#quote-carousel 
+{
+  padding: 0 10px 30px 10px;
+  margin-top: 30px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #222;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left 
+{
+  left: -12px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right 
+{
+  right: -12px !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+  background: #c0c0c0;
+}
+#quote-carousel .carousel-indicators .active 
+{
+  background: #333333;
+}
+#quote-carousel img
+{
+  width: 250px;
+  height: 100px
+}
+/* End carousel */
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #quote-carousel 
+    {
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px;
+    }
+    
+}
+
+/* Small devices (tablets, up to 768px) */
+@media (max-width: 768px) { 
+    
+    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+    
+    #quote-carousel .carousel-indicators {
+        bottom: -20px !important;  
+    }
+    #quote-carousel .carousel-indicators li {
+        display: inline-block;
+        margin: 0px 5px;
+        width: 15px;
+        height: 15px;
+    }
+    #quote-carousel .carousel-indicators li.active {
+        margin: 0px 5px;
+        width: 20px;
+        height: 20px;
+    }
+  }
+
+

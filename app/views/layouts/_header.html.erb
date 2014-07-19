@@ -1,7 +1,15 @@
-<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "The Firepit", '#', id: "logo" %>
+
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <%= link_to "The Firepit", root_path, id: "logo" %>
+        <nav>
+          <ul class="nav pull-right">
+            <li><%= link_to "Home",    root_path %></li>
+            <li><%= link_to "Help",    '#' %></li>
+            <li><%= link_to "Sign in", '#' %></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-  </div>
-</nav>
+  </header>
