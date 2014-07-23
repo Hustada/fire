@@ -7,8 +7,12 @@
       <div class="container">
       <%= link_to "The Firepit", '#', id: "logo" %>
        <p class="login pull-right">
+          <% if user_signed_in? %>
+          <%= link_to "Logout", destroy_user_session_path,:method => :delete, class: "btn btn-default btn-lg" %>
+          <% else %>
           <%= link_to "Login", user_session_path, class: "btn btn-default btn-lg" %>
-        </p>
+          <% end %>
+       </p>
       </div>
       </div>
        
