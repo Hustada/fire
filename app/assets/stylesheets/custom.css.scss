@@ -194,7 +194,7 @@ text-align: center;
   margin-left: auto;
   display: block;
   height: 200px;
-  background: rgb(243, 243, 243);
+  background: #333333;
   position: relative;
 }
 
@@ -206,7 +206,7 @@ text-align: center;
 }
 
 .col-md-4 {
-  color: rgb(124, 124, 124);
+  color: white;
 }
 
 /* carousel */
@@ -310,6 +310,17 @@ text-align: center;
         width: 20px;
         height: 20px;
     }
+  }
+
+  /* Sign Up Form */
+
+  ul.sign-up {
+    list-style-type: none;
+
+  }
+
+  ul.sign-up li {
+    margin-bottom: 20px;
   }
 
 
