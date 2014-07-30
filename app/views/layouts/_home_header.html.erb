@@ -23,7 +23,13 @@
         <div class="col-lg-12"
         <div class="header-description">
             <h2>Welcome to the Firepit!</h2>
+            <% if user_signed_in? %>
+            <%= link_to "Start New Pit", new_user_registration_path, class: "btn-default-start" %>
+            <br>
+            <%= link_to "Join Existing Pit", new_user_registration_path, class: "btn-default-join" %>
+            <% else %>
             <%= link_to "Join the Pit!", new_user_registration_path, class: "header-btn" %>
+            <% end %>
           </div>
           <div class="header-features">
             <div class="row">

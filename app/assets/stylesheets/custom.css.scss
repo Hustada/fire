@@ -161,10 +161,56 @@ text-align: center;
 }
 
 
-
 .header-btn:hover {
   background-color: transparent;
   color: white;
+  text-decoration: none;
+  
+}
+
+/* logged in user buttons home */
+
+.btn-default-start {
+  text-align: center;
+  background-color: transparent;
+  display: block;
+  width: 10%;
+  color: #716F6F;
+  margin: 0px auto;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bolder;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  padding: 10px 15px;
+  border: 1px solid;
+  border-color: #cccccc;
+}
+
+.btn-default-start:hover {
+  background-color: white;
+  text-decoration: none;
+}
+
+.btn-default-join {
+  text-align: center;
+  background-color: transparent;
+  display: block;
+  width: 10%;
+  color: #716F6F;
+  margin: 0px auto;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  padding: 10px 15px;
+  border: 1px solid;
+  border-color: #cccccc;
+}
+
+.btn-default-join:hover {
+  background-color: white;
   text-decoration: none;
 }
 
