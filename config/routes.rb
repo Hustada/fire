@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     get 'users/sign_out' => 'devise/sessions#destroy'
     match 'users/:id', to: 'users#show', as: 'user', via: 'get'
   end
+
+  resources :pits
   
 
 

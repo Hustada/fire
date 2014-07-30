@@ -1,0 +1,4 @@
+<%= form_for @pit, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <%= f.text_field :topic %>
+  <%= f.submit "Create" %>
+<% end %>
