@@ -104,11 +104,11 @@ color: white;
 }
 
 #home-header {
-background-image: url("firepit_80opac.png");
-background-repeat: no-repeat;
-background-size: cover;
+background: #333333;
+/*background-repeat: no-repeat;
+background-size: cover;*/
 width: 100%;
-height: 841px;
+height: 650px;
 display: block;
 }
 
@@ -175,7 +175,7 @@ text-align: center;
   background-color: transparent;
   display: block;
   width: 10%;
-  color: #716F6F;
+  color: #db522f;
   margin: 0px auto;
   text-transform: uppercase;
   font-size: 15px;
@@ -187,6 +187,7 @@ text-align: center;
   border-color: #cccccc;
 }
 
+
 .btn-default-start:hover {
   background-color: white;
   text-decoration: none;
@@ -197,7 +198,7 @@ text-align: center;
   background-color: transparent;
   display: block;
   width: 10%;
-  color: #716F6F;
+  color: #db522f;
   margin: 0px auto;
   text-transform: uppercase;
   font-size: 15px;
@@ -368,5 +369,19 @@ text-align: center;
   ul.sign-up li {
     margin-bottom: 20px;
   }
+
+.form-inputs.sign-in {
+  margin-left: 20px;
+}
+
+/* New Pit Form */
+
+.container.new-pit {
+  height: 100%;
+  margin-top: 150px;
+}
+
+
+
 
 

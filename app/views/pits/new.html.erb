@@ -1,4 +1,52 @@
-<%= form_for @pit, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-  <%= f.text_field :topic %>
-  <%= f.submit "Create" %>
+
+
+
+<div class="container new-pit">
+
+<%= render 'devise/shared/error_messages', obj: @pit %>
+  
+<%= form_for(@pit, html: {class: 'form-horizontal'}) do |f| %>
+
+    
+      <div class="form-group">
+                   <%= f.label :topic, class: "col-sm-2 control-label" %>
+             <div class="col-sm-6">
+                   <%= f.text_field :topic, class: "form-control", autofocus: true %>
+             </div>  
+      </div>
+      
+           <div class="form-group">
+                   <%= f.label :summary, class: "col-sm-2 control-label" %>
+             <div class="col-sm-6">
+                   <%= f.text_area :summary, class: "form-control", :placeholder => "Enter summary of book or video here" %>
+             </div>  
+           </div>
+       
+           <div class="form-group">
+                   <%= f.label :image, class: "col-sm-2 control-label" %>
+             <div class="col-sm-6">
+                   <%= f.file_field :summary, class: "form-control" %>
+             </div>  
+           </div>
+           <div class="form-group">
+                   <%= f.label :video, class: "col-sm-2 control-label" %>
+             <div class="col-sm-6">
+                   <%= f.text_field :video_url, class: "form-control", :placeholder => "paste Youtube URL here" %>
+             </div>  
+           </div>
+          <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-6">
+                      <%= f.submit "Start Pit", class: "btn btn-primary" %>
+                </div>
+          </div>
+        
+      
+
+
+</div>
+
+</div>
+</div>
+
+
 <% end %>

@@ -24,9 +24,9 @@
         <div class="header-description">
             <h2>Welcome to the Firepit!</h2>
             <% if user_signed_in? %>
-            <%= link_to "Start New Pit", new_user_registration_path, class: "btn-default-start" %>
+            <%= link_to "Start New Pit", new_pit_path, class: "btn-default-start" %>
             <br>
-            <%= link_to "Join Existing Pit", new_user_registration_path, class: "btn-default-join" %>
+            <%= link_to "Join Existing Pit", pits_path, class: "btn-default-join" %>
             <% else %>
             <%= link_to "Join the Pit!", new_user_registration_path, class: "header-btn" %>
             <% end %>
@@ -34,8 +34,8 @@
           <div class="header-features">
             <div class="row">
             <div class="col-lg-6 header-feature">
-              <h3><i class="icon-random"></i> &nbsp;Add a book, video, invite and discuss</h3>
-              <p>Find what others think about your ideas on very specific topics</p>
+              <h3><i class="icon-random"></i> &nbsp;Specific topics with specific people</h3>
+              <p>Start a topic with a book, video, or just and idea you have. Then invite and discuss</p>
             </div>
             <div class="col-lg-6 header-feature">
               <h3> <i class="icon-group"></i> &nbsp;Share and discuss around our digital fire</h3>
