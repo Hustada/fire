@@ -5,6 +5,10 @@ def new
 end
 
 def index
+  @user = User.find_by(params[:id])
+  @pit = @user.pits
+  @pit = Pit.all
+  @pits = Pit.order('created_at DESC')
 end
 
 def create
@@ -15,6 +19,11 @@ def create
     else
       render 'new'
     end
+end
+
+def show
+  @pit = Pit.find(params[:id])
+
 end
 
 def edit

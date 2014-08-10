@@ -1,0 +1,17 @@
+<div class = "container list-pits"> 
+  <% @pit.each do |pit| %>
+
+ <div class = "row">
+
+   <div class = "container">
+    <div class = "well pit-well"> 
+       <h3 id="pit-title"><%= link_to pit.topic, pit_path(pit) %></h3>
+          <br>
+            <p><%= pit.summary %></p>
+          <br>
+            <p>Pit Created by: <%= pit.user %> on <%= pit.created_at %></p>
+      </div>
+    </div>
+       <% end %>
+  </div>
+ </div>
