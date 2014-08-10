@@ -14,6 +14,13 @@
                    <%= f.text_field :topic, class: "form-control", autofocus: true %>
              </div>  
       </div>
+
+      <div class="form-group">
+                   <%= f.label :author, class: "col-sm-2 control-label" %>
+             <div class="col-sm-6">
+                   <%= f.text_field :author, class: "form-control", :placeholder => "Enter name of book author, lecturer, or presenter" %>
+             </div>  
+      </div>
       
            <div class="form-group">
                    <%= f.label :summary, class: "col-sm-2 control-label" %>

@@ -36,7 +36,7 @@ end
 private
 
 def pit_params
-    params.require(:pit).permit(:topic, :summary, :image, :video_url)
+    params.require(:pit).permit(:topic, :summary, :image, :video_url, :author)
 end
 
 end

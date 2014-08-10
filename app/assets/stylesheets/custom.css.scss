@@ -86,6 +86,13 @@ p {
 }
 
 
+/* About */
+
+
+.container.about {
+  margin-top: 100px;
+}
+
 /* Header */
 
 
@@ -295,6 +302,11 @@ h3.pit-title {
 }
 
 .pit-info-list {
+  color: #777777;
+  list-style-type: none;
+}
+
+.pit-creator-list {
   color: #777777;
   list-style-type: none;
 }
