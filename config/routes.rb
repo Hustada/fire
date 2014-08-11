@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     match 'users/:id', to: 'users#show', as: 'user', via: 'get'
   end
 
-  resources :pits
+  resources :pits do
+    resources :comments
+  end
   
 
 

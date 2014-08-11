@@ -38,15 +38,19 @@
         
 <div class="well">
     <h3 class="pit-title"><%= @pit.topic %></h2>
-        
-         <p><%= @pit.summary %></p>
-
-    <h3>Discussion</h3>
-    
-    <h3 class = "pit-comment">Replies to this summary:</h3>
-        <p>I fucking hate this book, seriously why did you post this?</p>
+    <p><%= @pit.summary %></p>
+    <h3>Replies</h3>
+    <%= render @pit.comments %>
+    <%= render "comments/form" %>
+ 
     </div>
   </div>
+
+
+
+
+ 
+
     
     <div class="col-md-4">
       <div class = "panel panel-default">
