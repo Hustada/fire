@@ -1,12 +1,15 @@
 
- 
 <p>
+
   <strong>Comment:</strong>
   <%= comment.body %>
+  <p>posted by: <%= comment.user.name %></p>
+
 </p>
 
-<p>
-  <%= link_to 'Destroy Comment', [comment.pit, comment],
+  <p>
+    <%= link_to 'Destroy Comment', [@pit, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
 </p>
+

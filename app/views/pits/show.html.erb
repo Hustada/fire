@@ -40,8 +40,9 @@
     <h3 class="pit-title"><%= @pit.topic %></h2>
     <p><%= @pit.summary %></p>
     <h3>Replies</h3>
-    <%= render @pit.comments %>
+    <%= render @pit.comments %> 
     <%= render "comments/form" %>
+</li>
  
     </div>
   </div>
@@ -55,7 +56,7 @@
     <div class="col-md-4">
       <div class = "panel panel-default">
         <div class = "panel-heading">
-          <h3 class="user-list">Pit Users</h3>
+          <h3 class="user-list">Pit Members</h3>
         </div>
         <div class = "panel-body">
       <ul class = "pit-user-list">

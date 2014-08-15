@@ -8,8 +8,13 @@
        <h3 id="pit-title"><%= link_to pit.topic, pit_path(pit) %></h3>
           <br>
             <p><%= pit.summary %></p>
+            <p>Replies (<%= pit.comments.count %>)</p>
           <br>
-            <p>Pit Created by: <%= pit.topic %> on <%= pit.created_at %></p>
+            <p>Pit Created by: <%= link_to pit.user.name, '#' %> on <%= pit.created_at %></p>
+
+
+
+
       </div>
     </div>
       <% end %>

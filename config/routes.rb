@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   resources :pits do
     resources :comments
   end
-  
+
+
 
 
 
