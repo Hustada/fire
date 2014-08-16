@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :pits do
-    resources :comments
+    resources :comments, :only => [:create, :destroy]
   end
 
 

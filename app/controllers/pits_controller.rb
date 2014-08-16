@@ -31,7 +31,6 @@ end
 def update
 end
 
-
 private
 
 def pit_params

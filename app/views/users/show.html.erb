@@ -4,13 +4,15 @@
             <div class = "well">
                <h3><%= @user.first_name %> <%= @user.last_name %></h3>
                    <h6>Email: <%= @user.email %></h6>
-                   <h6>Pits Started (5)</h6>
+                   <h6>Pits Started (<%= current_user.pits.count %>)</h6>
                    <h6>Active Pits (3)</h6>
+                  <div class = "well">
                    <h4>About Me</h4>
                    <p><%= @user.about %></p>
-                   <a><%= link_to "Start a new pit", new_pit_path %></a>
+                  </div>
+                  <a><%= link_to "Start a new pit", new_pit_path %></a>
                    <br>
-                   <a><%= link_to "Join a created pit", pits_path %></a>
+                  <a><%= link_to "Join a created pit", pits_path %></a>
             </div>
         </div>
     </div>

@@ -17,6 +17,8 @@ end
     redirect_to pit_path(@pit)
 end
 
+    
+
 
 def show  
 end

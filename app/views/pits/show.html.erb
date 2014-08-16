@@ -4,11 +4,11 @@
 
    <div class="col-md-8 pit-starter-info">
      <div class="well"> 
-              <h3 class = "pit-starter"> Pit Starter - Mark Hustad </h3>
+              <h3 class = "pit-starter"> Pit Starter - <%= @pit.user.name %></h3>
                 <ul class = "pit-creator-list">
                   <li>Ranking</li>
-                  <li>Email</li>
-                  <li>Pits Started</li>
+                  <li>Email: <%= @pit.user.email %></li>
+                  <li>Pits Started: <%= @pit.user.pits.count %> </li>
                   <li>Convincing arguments (14)</li>
                 </ul>
   </div>
@@ -40,7 +40,7 @@
     <h3 class="pit-title"><%= @pit.topic %></h2>
     <p><%= @pit.summary %></p>
     <h3>Replies</h3>
-    <%= render @pit.comments %> 
+    <%= render @pit.comments %>
     <%= render "comments/form" %>
 </li>
  
