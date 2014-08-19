@@ -16,12 +16,11 @@
          <center><h1>Welcome to the Firepit!</h1>
          <p>This is the place where sitting by the fire meets the digital world</p>
          <% if user_signed_in? %>
-         <!-- If user is logged in then show these 2 buttons -->
+         <!-- If user is logged in then show these 2 buttons and welcome message -->
+         <p>Welcome Back! <%=link_to current_user.name, current_user %></p>
          <%= link_to "Start New Pit", new_pit_path, class: "btn btn-default" %>
          <%= link_to "Join Existing Pit", pits_path, class: "btn btn-default" %>
-         <br>
-         <p>Welcome Back! 
-            <%=link_to current_user.name, current_user %></p>
+         
          <% else %>
          <%= link_to "Join the Pit!", new_user_registration_path, class: "btn btn-default" %>
          <br>

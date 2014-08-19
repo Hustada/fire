@@ -7,9 +7,11 @@ end
 def index
   @pit = Pit.all
   @user = User.find_by(params[:id])
-  @pit = @user.pits
-  @pits = Pit.order('created_at DESC').group_by { |pit| pit.created_at.strftime("%B %Y") }
+  @pits = Pit.paginate(:page => params[:page]).order('created_at ASC').group_by { |pit| pit.created_at.strftime("%B %Y") }
 end
+
+
+
 
 def create
   @user = current_user
@@ -20,6 +22,8 @@ def create
       render 'new'
     end
 end
+    
+
 
 def show
   @pit = Pit.find(params[:id])

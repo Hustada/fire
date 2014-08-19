@@ -17,6 +17,7 @@ gem 'bootstrap-sass'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 
+
 group :development do
   gem 'rails_layout'
   

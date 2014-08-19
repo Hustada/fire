@@ -4,13 +4,22 @@
 
    <div class="col-md-8 pit-starter-info">
      <div class="well"> 
-              <h3 class = "pit-starter"> Pit Starter - <%= @pit.user.name %></h3>
-                <ul class = "pit-creator-list">
-                  <li>Pit Ranking</li>
-                  <li>Email: <%= @pit.user.email %></li>
-                  <li>Pits Started: <%= @pit.user.pits.count %> </li>
-                  <li>Convincing arguments made (14)</li>
-                </ul>
+     
+   <tr>
+      <td><%= image_tag avatar_url(@pit.user) %></td>
+      <td><strong><%= @pit.user.name %></strong></td>
+   </tr>
+   <br>
+   <br>
+      <ul class = "pit-creator-list">
+        <li>Pit Ranking</li>
+        <li>Email: <%= @pit.user.email %></li>
+        <li>Pits Started: <%= @pit.user.pits.count %> </li>
+        <li>Convincing arguments made (14)</li>
+      </ul>
+   
+
+
   </div>
      <br>
         </div>
@@ -39,7 +48,7 @@
 <div class="well">
     <h3 class="pit-title"><%= @pit.topic %></h2>
     <p><%= @pit.summary %></p>
-    <h3>Replies</h3>
+    <h3>Discussion</h3>
     <%= render @pit.comments %>
     <%= render "comments/form" %>
 </li>
