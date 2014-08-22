@@ -1,19 +1,21 @@
-<p>
+  <div class = "well">
+    <p>
+    
+    <%= comment.body %>
+    <p>posted by: <%= comment.user.name %></p>
+       <%= link_to "Convinced", pit_comment_like_path(@pit, comment), method: :put %>
+       <%= link_to "Unconvinced", pit_comment_dislike_path(@pit, comment), method: :put %>
+  </p>
 
-  <strong>Comment:</strong>
-  <%= comment.body %>
-  <p>posted by: <%= comment.user.name %></p>
+  <p>
+    <%if comment.user == current_user %>
 
-</p>
-
-
-<p>
-  <%if comment.user == current_user %>
-   <%= link_to 'Destroy Comment', [@pit, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-  <% end %>             
-</p>
+     <%= link_to 'Destroy Comment', [@pit, comment],
+                 method: :delete,
+                 data: { confirm: 'Are you sure?' } %>
+    <% end %>             
+  </p>
+  </div>
 
 
 

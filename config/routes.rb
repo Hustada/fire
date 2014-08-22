@@ -8,9 +8,12 @@ Rails.application.routes.draw do
   end
 
   resources :pits do
-    resources :comments, :only => [:create, :destroy]
+    resources :comments do
+      put "like", to: "comments#upvote"
+      put "dislike", to: "comments#downvote"
+    end
   end
-
+  
 
 
 

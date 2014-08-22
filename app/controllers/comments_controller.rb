@@ -17,6 +17,23 @@ end
     redirect_to pit_path(@pit)
 end
 
+def upvote
+  @pit = Pit.find(params[:pit_id])
+  @comment = @pit.comments.find(params[:comment_id])
+  @comment.upvote_from current_user
+  redirect_to pit_path(@pit)
+end
+
+def downvote
+  @pit = Pit.find(params[:pit_id])
+  @comment = @pit.comments.find(params[:comment_id])
+  @comment.downvote_from current_user
+  redirect_to pit_path(@pit)
+end
+
+def update
+end
+
     
 
 

@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  acts_as_voter
   has_many :pits
   has_many :comments
   enum role: [:user, :vip, :admin]

@@ -33,6 +33,10 @@ def edit
 end
 
 def update
+   @pit = Pit.find(pit_params[:id])
+     if @pit.update_attributes(pit_params)
+       redirect_to @pit
+     end
 end
 
 private
