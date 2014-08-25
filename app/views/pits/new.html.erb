@@ -4,10 +4,11 @@
 <div class="container new-pit">
 
 <%= render 'devise/shared/error_messages', obj: @pit %>
-  
-<%= form_for(@pit, html: {class: 'form-horizontal'}) do |f| %>
 
-    
+<%= form_for @pit, :html => {:multipart => true} do |f| %>
+
+    <div class = "form-horizontal">
+
       <div class="form-group">
                    <%= f.label :topic, class: "col-sm-2 control-label" %>
              <div class="col-sm-6">
@@ -25,20 +26,21 @@
            <div class="form-group">
                    <%= f.label :summary, class: "col-sm-2 control-label" %>
              <div class="col-sm-6">
-                   <%= f.text_area :summary, class: "form-control", :placeholder => "This is where you present an argument for or against the material presented and state why you think it is accurate or not" %>
+                   <%= f.text_area :summary, class: "form-control", :placeholder => "Present an argument for or against the material presented and state why you think it is accurate or not" %>
              </div>  
            </div>
        
            <div class="form-group">
                    <%= f.label :image, class: "col-sm-2 control-label" %>
              <div class="col-sm-6">
-                   <%= f.file_field :summary, class: "form-control" %>
+                   <%= f.file_field :image, class: "form-control" %>
              </div>  
            </div>
            <div class="form-group">
                    <%= f.label :video, class: "col-sm-2 control-label" %>
              <div class="col-sm-6">
-                   <%= f.text_field :video_url, class: "form-control", :placeholder => "paste Youtube URL here" %>
+                   <%= f.text_field :video_url, class: "form-control", :placeholder => "example: //www.youtube.com/embed/hBHYdK9xtYs" %>
+                   <p class = "youtube-instruction">Must use the shared -> embed option</p>
              </div>  
            </div>
           <div class="form-group">
@@ -46,7 +48,7 @@
                       <%= f.submit "Start Pit", class: "btn btn-primary" %>
                 </div>
           </div>
-        
+
       
 
 
@@ -54,6 +56,7 @@
 
 </div>
 </div>
+
 
 
 <% end %>

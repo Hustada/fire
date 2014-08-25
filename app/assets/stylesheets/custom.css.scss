@@ -285,6 +285,10 @@ text-align: center;
   margin-top: 150px;
 }
 
+p.youtube-instruction {
+  font-size: 12px;
+}
+
 /* Pit Show Page */
 
 
@@ -309,6 +313,33 @@ h3.pit-title {
 .pit-creator-list {
   color: #777777;
   list-style-type: none;
+}
+
+p.like-summary {
+  font-size: 12px;
+}
+
+p.like-pit {
+  font-size: 12px;
+}
+
+p.dislike-pit {
+  font-size: 12px;
+}
+
+.pit-rep {
+  display: block;
+  float: right;
+  text-align: right;
+}
+
+.like-argument {
+  display: inline-block;
+}
+
+.pit-image {
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 /* Pit List Page */
@@ -336,6 +367,31 @@ h3.user-sign-up {
 
 .container.user-sign-up {
   margin-top: 100px;
+}
+
+/* Comment likes and Dislikes */
+
+p.like-comment {
+  font-size: 12px;
+  text-align: right;
+}
+
+p.dislike-comment {
+  font-size: 12px;
+  text-align: right;
+}
+
+p.like-response {
+  font-size: 12px;
+}
+
+.response {
+  display: inline-block;
+  float: left;
+}
+
+.response-convince {
+  text-align: right;
 }
 
 

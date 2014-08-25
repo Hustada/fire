@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   end
 
   resources :pits do
+    put "like", to: "pits#upvote"
+      put "dislike", to: "pits#downvote"
     resources :comments do
       put "like", to: "comments#upvote"
       put "dislike", to: "comments#downvote"

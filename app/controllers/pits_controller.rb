@@ -39,6 +39,19 @@ def update
      end
 end
 
+def upvote
+  @pit = Pit.find(params[:pit_id])
+  @pit.upvote_from current_user
+  redirect_to pit_path(@pit)
+end
+
+def downvote
+  @pit = Pit.find(params[:pit_id])
+  @pit.downvote_from current_user
+  redirect_to pit_path(@pit)
+end
+
+
 private
 
 def pit_params

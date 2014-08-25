@@ -17,6 +17,7 @@ gem 'bootstrap-sass'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'acts_as_votable'
+gem 'carrierwave'
 
 
 group :development do

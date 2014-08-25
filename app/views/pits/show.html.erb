@@ -33,7 +33,10 @@
                 <li>Pit Views</li>
                 <li>Pit Ranking</li>
                 <li>Pit Category - Book - Philosophy</li>
-                <li>Convincing arguments made (1)</li>
+                
+                <li>Convincing arguments made ( <%= convincing_pit %> )</li>
+              
+
                 <li>Logical Fallacies (3)</li>
               </ul>
             </div>
@@ -46,15 +49,33 @@
       <div class="col-md-8">
         
 <div class="well">
-    <h3 class="pit-title"><%= @pit.topic %></h2>
+    
+    <div class = "pit-image"><%= image_tag @pit.image_url %></div>
+    <iframe width="560" height="345" src=<%= @pit.video_url %> frameborder="0" allowfullscreen></iframe>
+    <h3 class="pit-title"><%= @pit.topic %></h3>
     <p><%= @pit.summary %></p>
+    <p>by <%= @pit.author %></p>
+    <br>
+    <br>
+    <div class = "like-argument">
+    <p class = "like-summary">Was this argument convincing to you?</p>
+    <%= link_to "Yes", pit_like_path(@pit), method: :put, class: "btn btn-default" %>
+    <%= link_to "No", pit_dislike_path(@pit), method: :put, class: "btn btn-default" %>
+    </div>
+    <div class = "pit-rep">
+    <p class = "like-pit"><%= @pit.get_likes.size %> users found this argument convincing</p>
+    <p class = "dislike-pit"><%= @pit.get_dislikes.size %> users found this argument unconvincing</p>
+    </div>
+    <br>
+    <br>
     <h3>Responses</h3>
     <%= render @pit.comments %>
     <%= render "comments/form" %>
 </li>
- 
+   
     </div>
   </div>
+
 
 
 
